@@ -12,7 +12,11 @@ function greet(name) {
 }
 
 function greetArray(name){
-    return "Hello, " + name[0] + " and " + name[1]
+    let HelloText = "";
+    for (let i = 0; i < name.length-2; i++) {
+        HelloText = HelloText + name[i] + ", ";
+    }
+    return "Hello, " + HelloText + name[name.length-2] + " and " + name[name.length-1]
 }
 
 module.exports = greet;
