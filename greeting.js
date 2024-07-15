@@ -1,7 +1,10 @@
-function greet(transmission) {
-    if(transmission === undefined || transmission === null || transmission === ""){
+function greet(name) {
+    if(name === undefined || name === null || name === ""){
         return "Hello, there"
     }
-    return "Hello, " + transmission
+    if(name === name.toUpperCase()){
+        return "HELLO, " + name
+    }
+    return "Hello, " + name
 }
 module.exports = greet;
