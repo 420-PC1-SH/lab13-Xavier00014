@@ -21,4 +21,8 @@ describe("greeting", function () {
         let result = greet("HAN");
         expect(result).toEqual("HELLO, HAN");
     });
+    test("Test greet 2 people", function () {
+        let result = greet(["Jango", "Boba"]);
+        expect(result).toEqual("Hello, Jango and Boba");
+    });
 })
