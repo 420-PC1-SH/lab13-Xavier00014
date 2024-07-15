@@ -17,4 +17,8 @@ describe("greeting", function () {
         let result = greet("");
         expect(result).toEqual("Hello, there");
     });
+    test("Test greet HAN", function () {
+        let result = greet("HAN");
+        expect(result).toEqual("HELLO, HAN");
+    });
 })
