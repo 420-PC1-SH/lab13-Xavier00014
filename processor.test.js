@@ -26,4 +26,15 @@ describe("transmission processor", function () {
         let result = processor("9701::<487297403495720912>");
         expect(result.rawData).not.toEqual(undefined);
     });
+
+    test("rawData start whit <", function () {
+        const expectedError = new Error('Data is invalid ; should contain "<"');
+        expect(() => { processor("9701::489584872710>"); }).toThrow(expectedError);
+    });
+
+    test("rawData start whit <", function () {
+        const expectedError = new Error('Data is invalid ; should contain ">"');
+        expect(() => { processor("9701::<489584872710"); }).toThrow(expectedError);
+    });
+
 });
