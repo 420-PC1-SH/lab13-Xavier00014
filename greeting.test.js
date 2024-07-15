@@ -1,4 +1,4 @@
-const processor = require('./greeting.js');
+const greet = require('./greeting.js');
 
 describe("greeting", function () {
     test("Test return Hello, Luke", function () {
