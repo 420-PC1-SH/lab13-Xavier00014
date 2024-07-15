@@ -13,6 +13,9 @@ function processor(transmission) {
     if(isNaN(transmission.split("<")[1].split(">")[0])){
         throw new Error('Data is invalid ; not a number');
     }
+    if(isNaN(parts[0])){
+        throw new Error('id is invalid ; not a number');
+    }
     return {
         id: Number(parts[0]),
         rawData: rawData
