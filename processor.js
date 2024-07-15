@@ -10,6 +10,9 @@ function processor(transmission) {
     if(rawData[rawData.length-1] !== '>'){
         throw new Error('Data is invalid ; should contain ">"');
     }
+    if(isNaN(transmission.split("<")[1].split(">")[0])){
+        throw new Error('Data is invalid ; not a number');
+    }
     return {
         id: Number(parts[0]),
         rawData: rawData
